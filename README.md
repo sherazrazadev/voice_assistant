@@ -1,6 +1,6 @@
-# Botmer Voice Assistant - Flask Web App
+#  Voice Assistant - Flask Web App
 
-Welcome to **Botmer Voice Assistant**, a Flask-based web application for voice-based interaction. This README provides a step-by-step guide to set up and run the application locally with HTTPS support for seamless voice conversation functionality.
+Welcome to **Voice Assistant**, a Flask-based web application for voice-based interaction. This README provides a step-by-step guide to set up and run the application locally with HTTPS support for seamless voice conversation functionality.
 
 ---
 
@@ -18,7 +18,7 @@ Welcome to **Botmer Voice Assistant**, a Flask-based web application for voice-b
 Move to the Project Directory using the command:
 
 ```bash
-cd botmer-voice-assistant
+cd voice-assistant
 ```
 
 ---
@@ -80,19 +80,17 @@ To enable voice conversation functionality, HTTPS is required. Use Ngrok to crea
 
 ## Demo Link
 
-For testing purposes, you can access the demo version of the Botmer Voice Assistant using the following link:
-
-[Demo Link](https://api.botmer.io/) *(Replace with the actual link when available)*
+For testing purposes, you can access the demo version of the  Voice Assistant using the following link:
 
 ---
 
-## How to Use Botmer
+## How to Use assistant
 
 1. **Start a Conversation**  
-   Open the application and click the **"Talk to Botmer"** button to begin a voice conversation.
+   Open the application and click the **"Talk to assistant"** button to begin a voice conversation.
 
 2. **Interrupting the Bot**  
-   If you want to interrupt Botmer during a conversation, simply say:
+   If you want to interrupt assistant during a conversation, simply say:
 
    **"Stop Emily"**
 
