@@ -32,16 +32,16 @@ class AIVoiceAssistant:
     
     def _create_kb(self):
         try:
-                    # Check if "Botmer_db" collection already exists
+                    # Check if "voiceAssistant_db" collection already exists
             # collections = self._client.get_collections().collections
-            # if any(collection.name == "Botmer_db" for collection in collections):
+            # if any(collection.name == "voiceAssistant_db" for collection in collections):
             #     print("Knowledgebase already exists. Skipping creation.")
             
             reader = SimpleDirectoryReader(
-                input_files=[r"/home/ubuntu/voice/VoiceAssistantBot/rag/botmer_file.txt"]
+                input_files=[r"/home/ubuntu/voice/VoiceAssistantBot/rag/voiceAssistant_file.txt"]
             )
             documents = reader.load_data()
-            vector_store = QdrantVectorStore(client=self._client, collection_name="Botmer_db")
+            vector_store = QdrantVectorStore(client=self._client, collection_name="voiceAssistant_db")
             storage_context = StorageContext.from_defaults(vector_store=vector_store)
             self._index = VectorStoreIndex.from_documents(
                 documents, service_context=self._service_context, storage_context=storage_context
@@ -62,9 +62,9 @@ class AIVoiceAssistant:
     @property
     def _prompt(self):
         return  """
-                Botmer International Chatbot – Emily
+                voiceAssistant International Chatbot – Emily
                   Greeting:
-                  "Hello! This is Emily from Botmer International. How can I help?"
+                  "Hello! This is Emily from voiceAssistant International. How can I help?"
                   Interaction Flow:
                   1. Customer Inquiry:
                   "How can I assist you?"
@@ -83,7 +83,7 @@ class AIVoiceAssistant:
                   "Thank you! Have a great day."
                   Example Interactions:
                   - Greeting:
-                  "Hello! This is Emily from Botmer International. How can I help?"
+                  "Hello! This is Emily from voiceAssistant International. How can I help?"
                   - Customer Inquiry:
                   "How can I assist you?"
                   - Unknown Query:
