@@ -11,11 +11,11 @@ import time
 # Replace with your bot's API token from BotFather
 TELEGRAM_BOT_TOKEN = "7270830564:AAHVJTD2Kk8vF5N5yttKdM8IAOfDd_TOg3c"
 # Replace with your bot's API URL
-BOT_API_URL = "https://api.botmer.io/process"  # Example API endpoint
-Voice_API_URL = "https://api.botmer.io/record"
+BOT_API_URL = "https://api.VoiceAssistant.io/process"  # Example API endpoint
+Voice_API_URL = "https://api.VoiceAssistant.io/record"
 # Start command handler
 async def start(update: Update, context: CallbackContext):
-    await update.message.reply_text("Hello! My name is Botmer")
+    await update.message.reply_text("Hello! My name is VoiceAssistant")
 # Message handler for user input
 async def handle_message(update: Update, context: CallbackContext):
     user_message = update.message.text
@@ -76,7 +76,7 @@ async def handle_voice(update: Update, context: CallbackContext):
                 mp3_binary = mp3_response.content
 
                 # Send the MP3 as an audio file directly (without filename)
-                await update.message.reply_audio(audio=mp3_binary, filename="Botmer-Voice")
+                await update.message.reply_audio(audio=mp3_binary, filename="VoiceAssistant-Voice")
 
                 # await update.message.reply_voice(voice=audio_url)
         except Exception as e:
