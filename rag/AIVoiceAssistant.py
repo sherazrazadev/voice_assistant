@@ -38,11 +38,11 @@ class AIVoiceAssistant:
     def _create_kb(self):
         try:
             reader = SimpleDirectoryReader(
-                input_files=[r"/home/ubuntu/voice/VoiceAssistantBot/rag/botmer_file.txt"]
+                input_files=[r"/home/ubuntu/voice/VoiceAssistantBot/rag/VoiceAssistant_file.txt"]
             )
             documents = reader.load_data()
 
-            vector_store = QdrantVectorStore(client=self._client, collection_name="Botmer_db")
+            vector_store = QdrantVectorStore(client=self._client, collection_name="VoiceAssistant_db")
             storage_context = StorageContext.from_defaults(vector_store=vector_store)
 
             self._index = VectorStoreIndex.from_documents(
@@ -80,7 +80,7 @@ class AIVoiceAssistant:
     def _prompt(self):
         return (
             """
-            Botmer International Chatbot – Emily
+            VoiceAssistant International Chatbot – Emily
             
             Rules:
             - ALWAYS respond with no more than two short sentences.
